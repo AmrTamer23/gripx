@@ -10,7 +10,13 @@ pub fn run(args: Vec<String>) {
 
     if check_if_exists(&params.file) {
         let matches = search_in_file(&params.word, &params.file);
-        println!("The first match: {}", matches.get(0).expect("No match"))
+        if matches.len() < 1 {
+            panic!("There's no match in the given file");
+        } else {
+            for line in matches {
+                println!("{}", line);
+            }
+        }
     } else {
         panic!("The file path is incorrect");
     }
