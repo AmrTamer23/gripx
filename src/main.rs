@@ -1,3 +1,9 @@
+use std::env;
+
+use gripx::run;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+
+    run(args);
 }
