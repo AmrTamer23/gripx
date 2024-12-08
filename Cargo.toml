@@ -2,5 +2,8 @@
 name = "gripx"
 version = "0.1.0"
 edition = "2021"
+description = "a cooler alt for grep built in rust."
+license = "MIT"
+repository = "https://github.com/amrtamer23/gripx"
 
 [dependencies]
